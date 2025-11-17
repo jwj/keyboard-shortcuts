@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@picocss/pico@2/css/pico.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script lang="javascript" src="data/os.js"></script>
+  <script lang="javascript" src="data/editors.js"></script>
+  <script lang="javascript" src="data/apps.js"></script>
+  <script lang="javascript" src="data/browsers.js"></script>
+  <script lang="javascript" src="script.js"></script>
+  <title>Keyboard Shortcuts</title>
+</head>
+
+<body class="container">
+  <header>
+    <form>
+      <fieldset>
+        <!-- <legend>OS:</legend>-->
+        <input type="radio" id="win" name="os" checked />
+        <label for="win">Win</label>
+        <input type="radio" id="mac" name="os" />
+        <label for="mac">Mac</label>
+        <input type="radio" id="linux" name="os" />
+        <label for="linux">Linux</label>
+      </fieldset>
+      <fieldset>
+        <label>
+          <input name="web" type="checkbox" role="switch" />
+          Web
+        </label>
+      </fieldset>
+    </form>
+  </header>
+  <main>
+    <div class="griddy">
+
+       <div class="box">
+        <div class="title">OS</div>
+        <table>
+          <theader>
+            <tr>
+              <th>&nbsp;</th>
+              <th>Mac</th>
+              <th>Win</th>
+            </tr>
+          </theader>
+          <tbody id="osKeys"></tbody>
+        </table>
+      </div>
+
+      <div class="box">
+        <div class="title">Editors</div>
+        <table>
+          <theader>
+            <tr>
+              <th>&nbsp;</th>
+              <th>VSCode</th>
+              <th>Vim</th>
+            </tr>
+          </theader>
+          <tbody id="editorsKeys"></tbody>
+        </table>
+      </div>
+
+      <div class="box">
+        <div class="title">Browsers</div>
+        <table>
+          <theader>
+            <tr>
+              <th>&nbsp;</th>
+              <th>Safari</th>
+              <th>Edge</th>
+              <th>Brave</th>
+            </tr>
+          </theader>
+          <tbody id="browserKeys"></tbody>
+        </table>
+      </div>
+
+      <div class="box">
+        <div class="title">Apps (template)</div>
+        <table>
+          <theader>
+            <tr>
+              <th>&nbsp;</th>
+              <th>Mac</th>
+              <th>Win</th>
+              <th>Web</th>
+            </tr>
+          </theader>
+          <tbody id="appsTemplate"></tbody>
+        </table>
+      </div>
+
+      <div class="box">
+        <div class="title">Test</div>
+        <table>
+          <theader>
+            <tr>
+              <th>&nbsp;</th>
+              <th>&#63743;</th>
+              <th>&#x1FA9F;</th>
+            </tr>
+          </theader>
+          <tbody>
+            <tr>
+              <td>(test)</td>
+              <td class="keys">cmd ctrl shift alt space enter</td>
+              <td class="keys">?</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    </div>
+  </main>
+  <script>
+
+    document.addEventListener("DOMContentLoaded", function () {
+      const fields = ["mac", "win"];
+
+      buildUi("osKeys", os, ["mac", "win"]);
+      buildUi("browserKeys", browsers, ["safari", "edga", "brave"]);
+      buildUi("editorsKeys", editors, ["vscode", "vim"]);
+      
+      apps.forEach(app => {
+        const template = document.getElementById("appsTemplate");
+        // ...
+
+      });
+
+      renderKeys();
+    });
+
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,78 @@
+:root {
+    --pico-font-size: 80%;
+    -webkit-font-smoothing: antialiased;
+}
+
+.griddy {
+    column-count: 3;
+    /* or use column-width */
+    column-width: auto;
+    column-gap: 20px;
+}
+
+.box {
+    break-inside: avoid;
+    /* prevents boxes from breaking across columns */
+    margin-bottom: 20px;
+    padding: 0.5em 1em;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.box2 {
+    min-width: 400px;
+    max-width: 400px;
+}
+
+.title {
+    font-size: 150%;
+}
+
+.box th,
+.box td {
+    border: none;
+    padding: 1px 1px;
+}
+
+.box th {
+    text-align: center;
+    color: #888;
+}
+
+.section {
+    color: #090909;
+    font-size: 95%;
+    font-weight: bold;
+}
+
+.keys {
+    white-space: nowrap;
+}
+
+.key {
+    border: 1px solid #aaa;
+    border-radius: 4px;
+    display: inline-block;
+    font-family:
+        "Apple Symbols",
+        "Segoe UI Symbol",
+        "Noto Sans Symbols",
+        "Noto Sans Symbols 2",
+        "Symbola",
+        "Segoe UI",
+        "Arial Unicode MS",
+        "monospace",
+        sans-serif;
+    font-family: system-ui, sans-serif;
+    text-transform: capitalize;
+    margin: 0;
+    padding: 0.1em 0.7em;
+}
+
+.key2 {
+    font-size: 1.2em;
+    background-color: #dcdcdc;
+    box-shadow:
+        inset 0 1px 4px rgba(0, 0, 0, 0.1),
+        inset 0 -4px 12px rgba(150, 150, 150, 0.8);
+}
